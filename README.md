@@ -21,6 +21,8 @@ The dataset contains sensor readings and operational parameters recorded from in
 
 GitHub Repository: [Predictive Maintenance](https://github.com/jaysri125278/Predictive-Maintenance/tree/main)
 
+Detailed Explanation: [https://drive.google.com/file/d/1M3eaI0dI1s25GTxDs1wjsYLTCa8KJrzJ/view?usp=sharing](https://drive.google.com/file/d/1M3eaI0dI1s25GTxDs1wjsYLTCa8KJrzJ/view?usp=sharing)
+
 ## Installation
 
 1. Clone this repository to your local machine.
