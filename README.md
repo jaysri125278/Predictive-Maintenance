@@ -28,7 +28,7 @@ Clone the repository
 ```bash
 git clone https://github.com/jaysri125278/Predictive-Maintenance.git
 cd Predictive-Maintenance
-bash
+
 
 Use venv or conda to create a virtual environment and install dependencies.
 
