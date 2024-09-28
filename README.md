@@ -7,11 +7,10 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Dataset](#dataset)
+- [Technologies](#technologies)
+- [Python Libraries](#python_libraries)
 - [Modeling and Algorithms](#modeling-and-algorithms)
-- [Usage](#usage)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+- [Evaluation Metrics](#evaluation-metrics)
 - [Contact](#contact)
 
 ## Introduction
@@ -76,6 +75,7 @@ To deal with the imbalance in failure types, SMOTENC is used for synthetic overs
 For questions or suggestions, please reach out to:
 
 **Name**: Jaysri Saravanan
+
 **Email**: saravananjaysri@gmail.com
 
 
