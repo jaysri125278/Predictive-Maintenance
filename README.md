@@ -28,8 +28,6 @@ GitHub Repository: [Predictive Maintenance](https://github.com/jaysri125278/Pred
 2. Install the required dependencies by running `pip install -r requirements.txt`.
 3. Set up a MongoDB database and configure the connection details in the project.
 
-### Technologies and Libraries
-
 ### Dataset
 
 The dataset consists of 10 000 data points stored as rows with 14 features in columns
@@ -42,14 +40,29 @@ The dataset consists of 10 000 data points stored as rows with 14 features in co
 - **tool wear [min]**: The quality variants H/M/L add 5/3/2 minutes of tool wear to the used tool in the process. and a 'Machine failure' label that indicates whether the machine has failed in this particular data point for any of the following failure modes is true.
 - **Target** : Failure or Not, Failure Type : Type of Failure (There are two targets dont take these as features
 
-Modeling and Algorithms
+### Technologies
+- python
+- MongoDB
+- Jupyter Notebook
+
+## Python Libraries
+- **Pandas & NumPy** – Data manipulation and numerical computing.
+- **Matplotlib & Seaborn** – Data visualization.
+- **Scikit-learn** – For preprocessing, model training, and evaluation.
+- **XGBoost** – High-performance classifier.
+- **Imbalanced-learn (SMOTENC)** – Handling imbalanced data.
+- **PyMong**o – MongoDB integration.
+- **Pickle** – Saving/loading models.
+- **Isolation Forest** – Anomaly detection.
+
+### Modeling and Algorithms
 The project employs multiple machine learning models, including:
 
-Random Forest Classifier: A robust model for classification tasks.
-XGBoost: An optimized gradient boosting algorithm.
-Support Vector Machine (SVM): A powerful classifier for high-dimensional spaces.
-Multilayer Perceptron (MLP): A deep learning model for complex patterns.
-KMeans Clustering: For unsupervised learning and clustering analysis.
+- **Random Forest Classifier**: A robust model for classification tasks.
+- **XGBoost**: An optimized gradient boosting algorithm.
+- **Multilayer Perceptron (MLP)**: A deep learning model for complex patterns.
+- **KMeans Clustering**: For unsupervised learning and clustering analysis.
+
 To deal with the imbalance in failure types, SMOTENC is used for synthetic oversampling of the minority classes. Dimensionality reduction is done using PCA to improve model performance and interpretability.
 
 ### Evaluation Metrics
@@ -58,6 +71,12 @@ To deal with the imbalance in failure types, SMOTENC is used for synthetic overs
 - F1 Score
 - Confusion Matrix
 - Silhouette Score for clustering evaluation
+
+### Contact
+For questions or suggestions, please reach out to:
+
+**Name**: Jaysri Saravanan
+**Email**: saravananjaysri@gmail.com
 
 
 
