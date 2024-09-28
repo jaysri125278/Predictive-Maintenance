@@ -24,29 +24,23 @@ GitHub Repository: [Predictive Maintenance](https://github.com/jaysri125278/Pred
 
 ## Installation
 
-Clone the repository
-```bash
-git clone https://github.com/jaysri125278/Predictive-Maintenance.git
-cd Predictive-Maintenance
+1. Clone this repository to your local machine.
+2. Install the required dependencies by running `pip install -r requirements.txt`.
+3. Set up a MongoDB database and configure the connection details in the project.
 
+### Technologies and Libraries
 
-Use venv or conda to create a virtual environment and install dependencies.
+### Dataset
 
-```bash
-# Using venv
-python3 -m venv venv
-source venv/bin/activate
-bash
-
-# Using conda
-conda create --name predictive_maintenance python=3.8
-conda activate predictive_maintenance
-Install dependencies
-bash
-Copy code
-pip install -r requirements.txt
-Dataset
-The data used in this project is fetched from a MongoDB collection called PredictiveMaintainence. The dataset consists of sensor readings for various machinery, operating conditions, and labels for failure types. Preprocessing includes handling missing values, feature extraction, and balancing the dataset using SMOTENC.
+The dataset consists of 10 000 data points stored as rows with 14 features in columns
+- **UID**: unique identifier ranging from 1 to 10000
+- **productID**: consisting of a letter L, M, or H for low (50% of all products), medium (30%), and high (20%) as product quality variants and a variant-specific serial number
+- **air temperature [K]**: generated using a random walk process later normalized to a standard deviation of 2 K around 300 K
+- **process temperature [K]**: generated using a random walk process normalized to a standard deviation of 1 K, added to the air temperature plus 10 K.
+- **rotational speed [rpm]**: calculated from power of 2860 W, overlaid with a normally distributed noise
+- **torque [Nm]**: torque values are normally distributed around 40 Nm with an Ïƒ = 10 Nm and no negative values.
+- **tool wear [min]**: The quality variants H/M/L add 5/3/2 minutes of tool wear to the used tool in the process. and a 'Machine failure' label that indicates whether the machine has failed in this particular data point for any of the following failure modes is true.
+- **Target** : Failure or Not, Failure Type : Type of Failure (There are two targets dont take these as features
 
 Modeling and Algorithms
 The project employs multiple machine learning models, including:
@@ -58,49 +52,13 @@ Multilayer Perceptron (MLP): A deep learning model for complex patterns.
 KMeans Clustering: For unsupervised learning and clustering analysis.
 To deal with the imbalance in failure types, SMOTENC is used for synthetic oversampling of the minority classes. Dimensionality reduction is done using PCA to improve model performance and interpretability.
 
-Evaluation Metrics
-Accuracy
-ROC-AUC Score
-F1 Score
-Confusion Matrix
-Silhouette Score for clustering evaluation
-Usage
-Preprocessing: Clean and preprocess the data using the provided MongoDB dataset.
+### Evaluation Metrics
+- Accuracy
+- ROC-AUC Score
+- F1 Score
+- Confusion Matrix
+- Silhouette Score for clustering evaluation
 
-bash
-Copy code
-python src/data_preprocessing.py
-Train Models: Train various machine learning models.
 
-bash
-Copy code
-python src/train_model.py
-Evaluate: Run evaluation metrics and generate results.
 
-bash
-Copy code
-python src/evaluate.py
-Cluster Analysis: Use clustering for anomaly detection or further insights.
 
-bash
-Copy code
-python src/clustering_analysis.py
-Results
-Model Performance: Detailed evaluation metrics such as accuracy, F1 score, and ROC-AUC score are reported for different models.
-Clustering: KMeans clustering results are provided for pattern detection and anomaly detection.
-The results are stored in the /results folder.
-Contributing
-Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
-
-Fork the repository
-Create a branch for your feature
-Implement your feature
-Submit a pull request
-License
-This project is licensed under the MIT License. See the LICENSE file for more information.
-
-Contact
-For questions or suggestions, please reach out to:
-
-Name: Your Name
-Email: your.email@example.com
