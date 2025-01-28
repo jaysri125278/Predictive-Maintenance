@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance</title>
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <h1>Predictive Maintenance for Manufacturing Equipment</h1>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="type">Select Product Quality Type:</label>
+        <select name="type" id="type">
+            <option value="H">H</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select>
+        <br><br>
+
+        <label for="air_temp">Enter Air Temperature [K] (295 - 305):</label>
+        <input type="number" name="air_temp" id="air_temp" required><br><br>
+
+        <label for="process_temp">Enter Process Temperature [K] (310 - 315):</label>
+        <input type="number" name="process_temp" id="process_temp" required><br><br>
+
+        <label for="speed">Enter Rotational Speed [rpm] (1168 - 2886):</label>
+        <input type="number" name="speed" id="speed" required><br><br>
+
+        <label for="torque">Enter Torque [Nm] (3 - 77):</label>
+        <input type="number" name="torque" id="torque" required><br><br>
+
+        <label for="tool_wear">Enter Tool Wear [min] (0 - 253):</label>
+        <input type="number" name="tool_wear" id="tool_wear" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <form action="{{ url_for('retrain') }}" method="post">
+        <button type="submit">Retrain Model</button>
+    </form>
+
+    {% if data %}
+        <h3>Inserted Data:</h3>
+        <pre>{{ data }}</pre>
+    {% endif %}
+</body>
+</html>
